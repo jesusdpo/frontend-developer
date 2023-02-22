@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selectores-3</title>
+    <style>
+        p {
+            color: salmon;
+        }
+        p::first-letter {
+            color: teal;
+        }
+        p::before {
+            content: "✨ " ;
+        }
+        p:hover::before {
+            content: "💖 ";
+        }
+        p::after {
+            content: ":";
+        }
+        p:hover {
+            color: skyblue;
+        }
+        div p:nth-child(2) {
+            color: violet;
+        }
+        input:in-range {
+            background-color: greenyellow;
+        }
+        input:out-of-range {
+            color: red;
+            border: 2px solid red;
+        }
+        input:in-range + p::after {
+            content: 'Mayor de edad. 🚀';
+        }
+        input:out-of-range + p::after {
+            content: 'Menor de edad. 🙈'
+        }
+        button {
+            color: #1a73e8;
+        }
+        button:active {
+            color: black;
+        }
+    </style>
+</head>
+<body>
+    <p>Hola</p>
+    <div>
+        <p>Platzi</p>
+        <p>Master</p>
+        <p>Lo mejor</p>
+        <button>Botón</button>
+    </div>
+    <label for="age">Introduce tu edad</label>
+    <input type="number" name="age" id="age" min="18" max="100">
+    <p>Eres: </p>
+</body>
+</html>
